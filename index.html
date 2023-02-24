@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="styles.css" rel="stylesheet" />
+    <title>Imagens aleatórias</title>
+  </head>
+  <body>
+    <div>
+      <img alt="Imagem aleatória" />
+    </div>
+    <div>
+      <button type="button" onclick="gerarImagem()">Gerar nova imagem</button>
+    </div>
+  </body>
+
+  <script>
+    const imagem = document.querySelector('img')
+
+    function gerarImagem() {
+      let number = Math.floor(Math.random() * (999 - 100) + 100)
+      imagem.src = `https://picsum.photos/id/${number}/200/300`
+    }
+  </script>
+</html>
