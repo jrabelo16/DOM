@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Manipulando classes</title>
+  </head>
+  <style>
+    body {
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    button {
+      padding: 15px;
+      font-size: medium;
+    }
+
+    .escondido {
+      display: none;
+    }
+  </style>
+  <body>
+    <button onCLick="mostrarMensagem()">Mostrar mensagem</button>
+    <p class="escondido">Mensagem muito legal!!</p>
+  </body>
+
+  <script>
+    function mostrarMensagem() {
+      const mensagem = document.querySelector('p')
+      /*if (mensagem.classList.contains('escondido')) {
+        mensagem.classList.remove('escondido')
+      } else {
+        mensagem.classList.add('escondido')
+      }*/
+      mensagem.classList.toggle('escondido')
+    }
+  </script>
+</html>
